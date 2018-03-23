@@ -124,6 +124,11 @@ function sync_dir() {
 		--delete \
 		--acl 'private' \
 		${SYMLINK_FLAG} \
+		--exclude '*.cache/*' \
+		--exclude '*.gradle/*' \
+		--exclude '*.m2/*' \
+		--exclude '*.waterfox/*' \
+		--exclude '*.PyCharm*' \
 		--no-guess-mime-type \
 		--sse-c \
 		--sse-c-key "$ENCRYPTION_KEY" \
